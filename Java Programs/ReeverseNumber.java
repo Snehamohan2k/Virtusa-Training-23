@@ -1,4 +1,4 @@
-package interviewprograms;
+package virtusatask;
 public class ReverseNumber {
     public static void main(String[] args) {
         Integer number=12345;
