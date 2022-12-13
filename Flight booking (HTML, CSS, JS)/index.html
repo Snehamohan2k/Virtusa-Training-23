@@ -1,0 +1,129 @@
+<!DOCTYPE html>   
+<html lang="en">   
+<head>   
+<meta charset="utf-8">   
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flight Ticket Booking System</title>   
+<meta name="description" content="Bootstrap.">  
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">   
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css"></style>
+<script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script> 
+<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="./css_final.css">
+<script src="./filter.js"></script>
+</head>  
+<title> Flight Ticket Booking System</title>
+<body style="margin:50px auto;" >
+  <img
+    class="demo-bg"
+    src="flight.webp"
+    alt=""
+  >  
+  <div class="container">
+    <div class="row header" style="text-align:justify;color:green">
+      <div class="heading">
+    <h1>Flight Booking System</h1>
+    </div>
+    <div class="outer-wrapper" style="margin:30px auto">
+      <div class="table-wrapper">
+    <table id="book-table" class="table table-striped">
+      <thead>
+          <th col-index = 1>S.No</th>
+          <th col-index = 2>Flight Name
+              <br> <select class="table-filter" onchange="filter_rows()">
+                  <option value="all"></option>
+              </select>
+          </th>
+          <th col-index = 3>Departure Time
+              <br><select class="table-filter" onchange="filter_rows()">
+                  <option value="all"></option>
+              </select>
+          </th>
+          <th col-index = 4>Arrival Time
+             <br> <select class="table-filter" onchange="filter_rows()">
+                  <option value="all"></option>
+              </select>
+          </th>
+          <th col-index = 5>Price
+             <br> <select class="table-filter" onchange="filter_rows()">
+                  <option value="all"></option>
+              </select>
+          </th>
+          <th col-index = 5>Book here
+         
+         </th>
+        </thead>
+      <tbody>
+
+        <tr>
+          <td>1</td>
+          <td>IndiGo</td>
+          <td>19:25 11/10/22</td>
+          <td>22:25 11/10/22</td>
+          <td> Rs.2500</td>
+          <td> <a href="book.html"><button class="button">Book Now</button></td></a>
+</tr>
+<tr>
+          <td>2</td>
+          <td>Airasia India</td>
+          <td>01.35 12/10/22 </td>
+          <td>3.30 12/10/22</td>
+          <td> Rs.3000</td>
+          <td> <a href="book.html"><button class="button">Book Now</button></td></a>
+</tr>
+<tr>
+          <td>3</td>
+          <td>Lufthansa</td>
+          <td>15.00 13/10/22 </td>
+          <td>21.30 13/10/22</td>
+          <td> Rs.6000</td>
+          <td> <a href="book.html"><button class="button">Book Now</button></td></a>
+</tr>
+<tr>
+          <td>4</td>
+          <td>Emirates</td>
+          <td>10.00 14/10/22 </td>
+          <td>20.00 14/10/22</td>
+          <td> Rs.10000</td>
+          <td> <a href="book.html"><button class="button">Book Now</button></td></a>
+</tr>
+<tr>
+          <td>5</td>
+          <td>London Airlines</td>
+          <td>06.40 15/10/22 </td>
+          <td>18.00 15/10/22</td>
+          <td> Rs.8000</td>
+          <td> <a href="book.html"><button class="button">Book Now</button></td></a>
+</tr>
+<tr>
+  <td>5</td>
+  <td>New Airlines</td>
+  <td>06.40 15/10/22 </td>
+  <td>18.00 15/10/22</td>
+  <td> Rs.8500</td>
+  <td> <a href="book.html"><button class="button">Book Now</button></td></a>
+</tr>
+<tr>
+  <td>5</td>
+  <td>New Airlines</td>
+  <td>06.40 15/10/22 </td>
+  <td>18.00 15/10/22</td>
+  <td> Rs.9500</td>
+  <td> <a href="book.html"><button class="button">Book Now</button></td></a>
+</tr>
+       
+              </tbody>
+    </table>
+</div>  
+<script>
+getUniqueValuesFromColumn()
+window.onload = () => {
+            console.log(document.querySelector("#book-table > tbody > tr:nth-child(1) > td:nth-child(2) ").innerHTML);
+        };
+         $(document).ready( function () {$('#book-table').dataTable( {
+    "bSort": false
+  } );
+} );  
+</script>
+</html>  

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"    rel="stylesheet"
+    />
+    <script>  
+        function validateform(){  
+        var name=document.myform.name.value;  
+        var password=document.myform.password.value;  
+          
+        if (name==null || name==""){  
+          alert("Name can't be blank");  
+          return false;  
+        }else if(password.length<6||password=='/^[a-zA-Z0-9!@#$%^&*]{6,16}$/'){  
+          alert("Password must be at least 6 characters long.");  
+          return false;  
+          }  
+        }  
+        </script>  
+  </head>
+  <body>
+    <div class="login-box">
+      <h1>Login</h1>
+      <form name="myform" method="post" action="index.html">
+        <label>Name</label>
+        <input type="text" name="name" placeholder="" />
+        <label>Password</label>
+        <input type="password" name="password" placeholder="" />
+         <input type="submit" value="Submit" onClick="validateform()"/>
+      </form>
+    </div>
+    <p class="para-2">
+      Not have an account? <a href="signup.html">Sign Up Here</a>
+    </p>
+  </body>
+</html>
+
